@@ -1,0 +1,7 @@
+#Sat Feb 02 11:52:03 BRST 2019
+\!/=
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.tabulation.char=space
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.tabulation.size=2
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.indent_empty_lines=false
+/instance/org.codehaus.groovy.eclipse.ui/groovy.formatter.remove.unnecessary.semicolons=true
+/instance/org.codehaus.groovy.eclipse.ui/groovy.formatter.multiline.indentation=4
