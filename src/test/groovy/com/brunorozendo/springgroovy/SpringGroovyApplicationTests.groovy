@@ -1,17 +1,19 @@
 package com.brunorozendo.springgroovy
 
-import org.junit.Test
-import org.junit.runner.RunWith
-import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.test.context.junit4.SpringRunner
+import com.brunorozendo.springgroovy.base.TestBaseSpecification
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.context.ApplicationContext
 
-@RunWith(SpringRunner)
-@SpringBootTest
-class SpringGroovyApplicationTests {
+class SpringGroovyApplicationTests extends TestBaseSpecification{
 
-	@Test
-	void contextLoads() {
-	}
+  @Autowired
+  ApplicationContext context
+
+
+  def "test context loads"() {
+    expect:
+    context != null
+  }
 
 }
 
