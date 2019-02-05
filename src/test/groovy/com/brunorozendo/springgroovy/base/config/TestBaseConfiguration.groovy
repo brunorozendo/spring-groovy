@@ -17,15 +17,15 @@ import spock.mock.DetachedMockFactory
 @ScanScopedBeans
 @ComponentScan(basePackages = ['com.brunorozendo.springgroovy'])
 @TestPropertySource(locations = [
-        'classpath:/config/application.yaml',
-        'classpath:/config/application-test.yaml'])
-class TestBaseConfiguration {
+    'classpath:/config/application.yaml',
+    'classpath:/config/application-test.yaml'])
+class TestBaseConfiguration{
 
-    DetachedMockFactory mockFactory = new DetachedMockFactory()
+  DetachedMockFactory mockFactory = new DetachedMockFactory()
 
-    @Bean
-    PessoaService pessoaServiceTest() {
-        return mockFactory.Mock(PessoaService)
-    }
+  @Bean
+  PessoaService pessoaServiceTest() {
+    return mockFactory.Mock(PessoaService)
+  }
 
 }
