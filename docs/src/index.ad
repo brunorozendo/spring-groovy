@@ -9,13 +9,13 @@
 
 === Specifications summary do bru bru
 
-[small]#created on Fri Feb 15 00:47:34 BRST 2019 by bruno#
+[small]#created on Fri Feb 15 02:03:03 BRST 2019 by bruno#
 
 .summary
 [options="header"]
 |==================================================================================================================================
 | Total          | Passed          | Failed          | Feature failures | Feature errors   | Success rate        | Total time (ms) 
-| 3 | 3 | 0 | 0  | 0 | 1.0| 4223.0   
+| 3 | 3 | 0 | 0  | 0 | 1.0| 4049.0   
 |==================================================================================================================================
 
 === Specifications

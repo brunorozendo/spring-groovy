@@ -1,6 +1,8 @@
-<%  def fmt = new com.athaydes.spockframework.report.internal.StringFormatHelper()
-    def stats = com.athaydes.spockframework.report.util.Utils.stats( data )
- %>== Report for ${data.info.description.className}
+<%  
+def fmt = new com.athaydes.spockframework.report.internal.StringFormatHelper()
+def stats = com.athaydes.spockframework.report.util.Utils.stats( data )
+ %>
+== Report for ${data.info.description.className}
 
 === Summary do brunão
 
@@ -20,7 +22,13 @@ Result: **$result**
 <%
         for ( block in blocks ) {
  %>
-* ${block.kind} ${block.text}
+${block.kind
+	.replaceAll("Given", "Dados que")
+	.replaceAll("When", "Quando")
+	.replaceAll("Then", "Então")
+	.replaceAll("And:", "  -  ")
+	.replaceAll("Expect", "É esperado que")
+} ${block.text}
 <%
         }
         def executedIterations = iterations.findAll { it.dataValues || it.errors }

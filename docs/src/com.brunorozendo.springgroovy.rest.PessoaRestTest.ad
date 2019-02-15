@@ -1,3 +1,4 @@
+
 == Report for com.brunorozendo.springgroovy.rest.PessoaRestTest
 
 === Summary do brunão
@@ -5,7 +6,7 @@
 [options="header",cols="asciidoc,asciidoc"]
 |====
 |Total Runs        |Success Rate 													 |Total time												|Failures					 |Errors					|Skipped
-|1|100.0% |0.466 seconds |0 |0 |0
+|1|100.0% |0.341 seconds |0 |0 |0
 |====
 
 === Features
@@ -14,14 +15,14 @@
 
 Result: **PASS**
 
-* Given: mock do retorno na pessoa
+Dados que: mock do retorno na pessoa
 
-* When: buscar pessoa via url
+Quando: buscar pessoa via url
 
-* Then: deve retornar
+Então: deve retornar
 
-* And:  - página com estatus 200 (OK)
+  -   página com estatus 200 (OK)
 
-* And:  - o tipo da resposta deve ser json
+  -   o tipo da resposta deve ser json
 
-* And:  - o nome deve ser igual a 'ajajajaj'
+  -   o nome deve ser igual a 'ajajajaj'
