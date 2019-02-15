@@ -30,19 +30,22 @@ class PessoaRestTest extends TestBaseSpecification{
   }
 
   def 'pesquisar por unidade chama o serviço e retorna como JSON'() {
-    given:
+    given: "mock do retorno na pessoa"
     1 * pessoaServiceTest.pessoa >> {
       def pessoaDto = new PessoaDto()
       pessoaDto.name = "jajajaa"
       return pessoaDto
     }
 
-    when:
+    when: "buscar pessoa via url"
     def response = mockMvc.perform(get("/api/pessoa/10"))
 
-    then:
+    then: "deve retornar"
+	and: " - página com estatus 200 (OK)"
     response.andExpect(status().isOk())
+	and: " - o tipo da resposta deve ser json"
     response.andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+	and: " - o nome deve ser igual a 'ajajajaj'"
     response.andExpect(jsonPath('$.name', is('jajajaa')))
 
   }

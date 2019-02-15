@@ -1,0 +1,27 @@
+== Report for com.brunorozendo.springgroovy.rest.PessoaRestTest
+
+=== Summary do brunão
+
+[options="header",cols="asciidoc,asciidoc"]
+|====
+|Total Runs        |Success Rate 													 |Total time												|Failures					 |Errors					|Skipped
+|1|100.0% |0.466 seconds |0 |0 |0
+|====
+
+=== Features
+
+==== pesquisar por unidade chama o serviço e retorna como JSON
+
+Result: **PASS**
+
+* Given: mock do retorno na pessoa
+
+* When: buscar pessoa via url
+
+* Then: deve retornar
+
+* And:  - página com estatus 200 (OK)
+
+* And:  - o tipo da resposta deve ser json
+
+* And:  - o nome deve ser igual a 'ajajajaj'

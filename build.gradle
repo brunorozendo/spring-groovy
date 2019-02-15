@@ -5,7 +5,7 @@ buildscript {
 	}
 	repositories {
 		mavenCentral()
-		maven { url "https://plugins.gradle.org/m2/" }
+		maven { url 'https://plugins.gradle.org/m2/' }
 		maven { url 'https://repo.spring.io/snapshot' }
 		maven { url 'https://repo.spring.io/milestone' }
 	}
@@ -19,7 +19,7 @@ apply plugin: 'groovy'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'codenarc'
-apply plugin: "com.diffplug.gradle.spotless"
+apply plugin: 'com.diffplug.gradle.spotless'
 
 group = 'com.brunorozendo'
 version = '0.0.1-SNAPSHOT'
@@ -43,17 +43,17 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 
 
-	implementation("org.codehaus.groovy:groovy:2.5.5")
+	implementation("org.codehaus.groovy:groovy:2.5.6")
 
 
 	/** tests*/
-	testImplementation("org.codehaus.groovy:groovy-sql:2.5.5")
-	testImplementation("org.codehaus.groovy:groovy-templates:2.5.5")
-	testImplementation("org.codehaus.groovy:groovy-test:2.5.5")
-	testImplementation("org.codehaus.groovy:groovy-nio:2.5.5")
-	testImplementation("org.codehaus.groovy:groovy-macro:2.5.5")
-	testImplementation("org.codehaus.groovy:groovy-xml:2.5.5")
-	testImplementation("org.codehaus.groovy:groovy-json:2.5.5")
+	testImplementation("org.codehaus.groovy:groovy-sql:2.5.6")
+	testImplementation("org.codehaus.groovy:groovy-templates:2.5.6")
+	testImplementation("org.codehaus.groovy:groovy-test:2.5.6")
+	testImplementation("org.codehaus.groovy:groovy-nio:2.5.6")
+	testImplementation("org.codehaus.groovy:groovy-macro:2.5.6")
+	testImplementation("org.codehaus.groovy:groovy-xml:2.5.6")
+	testImplementation("org.codehaus.groovy:groovy-json:2.5.6")
 
 	testImplementation("org.spockframework:spock-core:1.3-RC1-groovy-2.5")
 	testImplementation("org.spockframework:spock-spring:1.3-RC1-groovy-2.5")

@@ -11,7 +11,8 @@ class SpringGroovyApplicationTests extends TestBaseSpecification{
 
 
   def "test context loads"() {
-    expect:
+    expect: "valida se o objeto foi criar,"
+	and: "significa que o spring consegui rodar sem nehum  problema."
     context != null
   }
 

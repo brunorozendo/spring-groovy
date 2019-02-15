@@ -1,0 +1,19 @@
+== Report for com.brunorozendo.springgroovy.SpringGroovyApplicationTests
+
+=== Summary do brunão
+
+[options="header",cols="asciidoc,asciidoc"]
+|====
+|Total Runs        |Success Rate 													 |Total time												|Failures					 |Errors					|Skipped
+|1|100.0% |3.757 seconds |0 |0 |0
+|====
+
+=== Features
+
+==== test context loads
+
+Result: **PASS**
+
+* Expect: valida se o objeto foi criar,
+
+* And: significa que o spring consegui rodar sem nehum  problema.
