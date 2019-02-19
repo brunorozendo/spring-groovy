@@ -1,6 +1,9 @@
 package com.brunorozendo.springgroovy.rest
 
-class PessoaDto{
+/**
+ * Dto usado para devilver ao cliente.
+ */
+class PessoaDto {
 
   String name
 

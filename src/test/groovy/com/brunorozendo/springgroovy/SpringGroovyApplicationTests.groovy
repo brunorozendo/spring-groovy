@@ -9,10 +9,9 @@ class SpringGroovyApplicationTests extends TestBaseSpecification{
   @Autowired
   ApplicationContext context
 
-
   def "test context loads"() {
     expect: "valida se o objeto foi criar,"
-	and: "significa que o spring consegui rodar sem nehum  problema."
+    and: "significa que o spring consegui rodar sem nehum  problema."
     context != null
   }
 
