@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.MediaType
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.setup.MockMvcBuilders
+import spock.lang.Unroll
 
 import static org.hamcrest.Matchers.is
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get
@@ -65,5 +66,19 @@ class PessoaRestTest extends TestBaseSpecification{
     response.andExpect(jsonPath('$.name', is('jajajaa')))
 
   }
+
+  @Unroll
+  def "maximum of #a and #b is #c"(){
+    expect:
+    Math.max(a, b) == c
+
+    where:
+    a | b | c
+    1 | 3 | 3
+    7 | 4 | 7
+    0 | 0 | 0
+    0 | 0 | 0
+  }
+
 
 }

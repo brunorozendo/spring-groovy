@@ -1,12 +1,8 @@
+<% def stats = com.athaydes.spockframework.report.util.Utils.aggregateStats( data ) %>
+
 = Spock Test Results
-// toc-title definition MUST follow document title without blank line!
-:toc-title: Table of Contents
 
-// numbering from here on
-:numbered:
-
-<% def stats = com.athaydes.spockframework.report.util.Utils.aggregateStats( data )
- %>== Specification run results
+== Specification run results
 
 === Specifications summary do bru bru
 
@@ -22,18 +18,14 @@
 === Specifications
 
 [options="header"]
-|===================================================================
-|Name  | Features | Failed | Errors | Skipped | Success rate | Time 
-<% data.each { name, map ->
- %>| $name | ${map.totalRuns} | ${map.failures} | ${map.errors} | ${map.skipped} | ${map.successRate} | ${map.time} 
-<% } %>
-|===================================================================
+|=========================================================================================================================================================================================================
+| Name              | Features               | Failed                | Errors              | Skipped              | Success rate             | Time                  <% data.each { name, map -> %>
+| link:${name}.html[$name] | ${map.stats.totalRuns} | ${map.stats.failures} | ${map.stats.errors} | ${map.stats.skipped} | ${map.stats.successRate} | ${map.stats.time}     <% } %>
+|=========================================================================================================================================================================================================
 
 
-<% data.each { name, map ->
- %>
+<% data.each { name, map -> %>
 <<<<
-
 include::${name}.ad[]
 <% } %>
 
