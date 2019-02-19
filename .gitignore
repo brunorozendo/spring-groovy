@@ -1,4 +1,8 @@
 
+docs/src/*.ad
+docs/src/*.json
+
+
 # Created by https://www.gitignore.io/api/maven,gradle,eclipse,sublimetext,intellij+all,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=maven,gradle,eclipse,sublimetext,intellij+all,visualstudiocode
 

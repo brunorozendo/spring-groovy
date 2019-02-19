@@ -2,6 +2,7 @@ buildscript {
 	ext {
 		springBootVersion = '2.2.0.BUILD-SNAPSHOT'
 		spotlessVersion = '3.17.0'
+		asciidoctorVersion = '1.5.10'
 	}
 	repositories {
 		mavenCentral()
@@ -12,6 +13,7 @@ buildscript {
 	dependencies {
 		classpath "com.diffplug.spotless:spotless-plugin-gradle:${spotlessVersion}"
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath "org.asciidoctor:asciidoctor-gradle-plugin:${asciidoctorVersion}"
 	}
 }
 
@@ -20,6 +22,7 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'codenarc'
 apply plugin: 'com.diffplug.gradle.spotless'
+apply plugin: 'org.asciidoctor.convert'
 
 group = 'com.brunorozendo'
 version = '0.0.1-SNAPSHOT'
@@ -79,3 +82,30 @@ spotless {
 test {
 	systemProperty 'project.buildDir', project.buildDir
 }
+
+
+buildscript {
+	repositories {
+		jcenter()
+	}
+
+	dependencies {
+
+	}
+}
+
+
+asciidoctor {
+	sourceDir = file('docs/src')
+	outputDir = file('build/docs')
+}
+
+
+
+
+tasks.register("docs") {
+	dependsOn clean
+	dependsOn test
+	finalizedBy asciidoctor
+}
+
