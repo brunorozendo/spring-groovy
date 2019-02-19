@@ -96,7 +96,7 @@ buildscript {
 
 
 asciidoctor {
-	sourceDir = file('docs/src')
+	sourceDir = file('build/docs/src')
 	outputDir = file('build/docs')
 }
 
