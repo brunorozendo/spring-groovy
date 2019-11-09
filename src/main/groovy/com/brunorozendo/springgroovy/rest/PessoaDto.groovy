@@ -7,4 +7,8 @@ class PessoaDto {
 
   String name
 
+  PessoaDto(String name) {
+    this.name = name
+  }
+
 }

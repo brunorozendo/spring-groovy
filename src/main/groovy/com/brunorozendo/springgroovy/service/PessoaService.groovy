@@ -9,10 +9,10 @@ import org.springframework.stereotype.Service
 @Service
 class PessoaService {
 
+  private final String name  = 'teste'
+
   PessoaDto getPessoa() {
-    PessoaDto p = new PessoaDto()
-    p.name = 'bruno'
-    p
+    new PessoaDto(this.name)
   }
 
 }
