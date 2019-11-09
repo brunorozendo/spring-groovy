@@ -11,4 +11,12 @@ class PessoaDto {
     this.name = name
   }
 
+  String getName() {
+    name
+  }
+
+  void setName(String name) {
+    this.name = name
+  }
+
 }

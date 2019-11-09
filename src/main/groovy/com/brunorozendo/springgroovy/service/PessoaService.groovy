@@ -4,7 +4,7 @@ import com.brunorozendo.springgroovy.rest.PessoaDto
 import org.springframework.stereotype.Service
 
 /**
- * Classe de servico/bo o qual contém as regras de negócio referentes a essa entidade.
+ * Classe de serviço o qual contém as regras de negócio referentes a essa entidade.
  */
 @Service
 class PessoaService {
