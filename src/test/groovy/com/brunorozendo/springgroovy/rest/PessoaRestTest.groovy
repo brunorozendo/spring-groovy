@@ -1,14 +1,16 @@
 package com.brunorozendo.springgroovy.rest
 
 import com.brunorozendo.springgroovy.service.PessoaService
+import org.springframework.http.MediaType
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.setup.MockMvcBuilders
 import spock.lang.Narrative
 import spock.lang.Specification
 import spock.lang.Title
-import spock.lang.Unroll
 
+import static org.hamcrest.Matchers.is
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*
 
 @Title("This is easy to read")
 @Narrative("""
@@ -35,23 +37,22 @@ class PessoaRestTest extends Specification {
     def 'pesquisar por unidade chama o serviço e retorna como JSON'() {
         reportInfo "Some information I want to show in the report"
         given: "mock do retorno na pessoa"
-        1 * this.pessoaService.getPessoa() >> {
+        1 * this.pessoaService.getProperty("pessoa") >> {
             new PessoaDto("bruno001")
         }
 
         when: "buscar pessoa via url"
-        /*def response = */ mockMvc.perform(get("/api/pessoa/10"))
+        def response = mockMvc.perform(get("/api/pessoa/10"))
 
         then: "deve retornar"
-        /*and: "página com estatus 200 (OK)"
+        and: "página com status 200 (OK)"
         response.andExpect(status().isOk())
         and: "o tipo da resposta deve ser json"
         response.andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
-        and: "o nome deve ser igual a 'ajajajaj'"
-        response.andExpect(jsonPath('$.name', is('jajajaa')))*/
+        and: "o nome deve ser igual a 'bruno001'"
+        response.andExpect(jsonPath('$.name', is('bruno001')))
 
     }
-
 
 
 }
